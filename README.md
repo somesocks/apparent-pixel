@@ -1,10 +1,10 @@
 # Apparent Pixels
 
-# Abstract
+#### Abstract
 
 How do I make a display-independent design?  Existing units for scale-invariance don't seem to provide a satisfactory solution.  I propose a new visual measue of size, the apparent pixel, and provide some simple formulae and examples of use.
 
-#Existing Display Measurements
+#### Existing Display Measurements
 
 * Pixel - A point sample of an image or the smallest rendering element of a display.  There is no inherent size or shape associated with a pixel.
 
@@ -20,14 +20,14 @@ How do I make a display-independent design?  Existing units for scale-invariance
 
 * VW - A reference dimension, equal to 1/100th of the viewport width.
 
-#The Problem
+#### The Problem
 
 The reason these units of measurement are incapable of providing true display-independent designs is that they fail to account for the apparent size of the display, from the viewpoint of the user.  The human eye (or a camera) uses a curved lens, which means the apparent size of an object, when seen by us, is a measure of _angle_ and not _length_.
 
 This means, the apparent size of a display, from the human eye, is a function of the size and shape of the display, the curvature of the human eye, and the _distance_ between the display and the eye.  Note that none of the above units take into account viewing distance, thus they cannot be accurately converted to an angular measurement.
 
 
-#Apparent Pixel
+#### Apparent Pixel
 
 Let's make some simplifying assumtions:
 
