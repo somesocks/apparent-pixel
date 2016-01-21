@@ -45,7 +45,7 @@ EYE ) - - - 1m - - - [] 1mm X 1mm SQUARE.
 
 Or, if you don't like to square pixels, imagine what a grid of points spaced 1mm apart looks like from 1 meter away.
 
-#Some Examples
+#### Some Examples
 
 1mm at a distance of 1m from your eye is roughly 0.057 degrees of your viewing angle.
 
@@ -60,5 +60,36 @@ A big screen TV, with a 50 inch disply, a 16:9 aspect ratio, at a distance of 3 
 A smartphone with a 5 inch display, a 9:16 aspect ratio, at a distanct of 1/3 of a meter away has an apparent size of roughly 189ap X 332ap.
 
 All of these devices, while drastically differing in size, have similar apparent sizes because of the change in viewing distance.
+
+Hold your thumb out in front of you!  Very roughly, the average human has about a 2 foot long arm and a thumb about 2cm wide.  This means your thumb is very roughly 32ap wide, when you look at it.
+
+#### Estimating Distances
+
+The biggest issue in accurately calculating AP is changes in distance.  However, for the most part, we can estimate it very roughly.
+
+* Most people sit roughly 1m away from their laptop or desktop.
+
+* Most people hold their smartphone in their hand, or on the table in front of them.  This is very roughly about 30cm away.
+
+* Most people sit roughly 2-3m away from their TV when they watch it.
+
+What about more complicated setups, such as movie projectors, electronic billboards, and stadium displays?  These need to be visible at a wide range of distances, and there are generally two things to consider here:
+
+	1) The average viewing distance, or what most people will see.
+
+	2) The farthest viewing distance.
+
+If you want to give a presentation in a meeting room with a projector, you want everyone to be able to read it clearly, so you should consider the fartherst person away.
+
+In a movie theater, on the other hand, the difference in apparent size is so great between the first row and the last row, that it might be better to scale to the average distance away, and assume most people will try to sit in the center.
+
+#### Calculate your Screen size in AP
+
+You can easily calculate your own screen size
+
+1 AP = 1mm / 1m = 1/1000, so
+
+(Width in AP) = ((Width in mm)/(Distance in mm)) / (1/1000), or
+(Width in AP) = 1000 * (Width in mm) / (Distance in mm)
 
 
