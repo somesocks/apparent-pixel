@@ -22,26 +22,33 @@ How do I make a truly display-independent design?  This is a problem that is rep
 
 #### The Problem
 
-The reason these units of measurement are incapable of providing true display-independent designs is that they fail to account for the apparent size of the display, from the viewpoint of the user.  The human eye (or a camera) uses a curved lens, which means the apparent size of an object, when seen by us, is a measure of _angle_ and not _length_.
+Why do existing units of measurement fail?  They are incapable of accurately representing _apparent size_, or the size we percieve objects to be.
 
-This means, the apparent size of a display, from the human eye, is a function of the size and shape of the display, the curvature of the human eye, and the _distance_ between the display and the eye.  Note that none of the above units take into account viewing distance, thus they cannot be accurately converted to an angular measurement.
+Why are they incapable of this? The human eye uses a curved lens, which means that to the eye, apparent size is a measure of _angle_ and not _length_.  Length, by itself, is meaningless!
+
+Unfortunately, this is not easily solved, as it involves figuring out the apparent size of a display with respect to the observer, but there are some simplifications we can make to get a decent approximation:
+
+1)  We can assume that the observer is looking at a display from head-on.
+
+2)  We can assume that the display is roughly flat.
+
+3)  We can assume that the display is not so large, or so close, that it takes a significant poriton of your field-of-view.
+
+All of these equate to making a _small-angles approximation_.  That is, we can say that all parts of the display are roughly equidistant from the observer.  If this is true, then we can approximate apparent size using only two variables:
+
+1) The size of the display.
+
+2) The distance from the display to the observer.
 
 
 #### Apparent Pixel
 
-Let's make some simplifying assumtions:
 
-1) Displays are mostly flat, mostly rectangular, and mostly have square pixels.
+Keeping these simplifications in mind, I propose a new measurement, the apparent pixel.  The apparent pixel is defined as:
 
-2) We don't need to consider the change in viewing angle between different parts of the display (We can treat the edges of the screen the same as the center).
+The apparent size of a 1 millimeter by 1 millimeter square, 1 meter in front of your eye.
 
-3) We don't need to consider changes in distance during use, for the most part we'll just assume the average distance from the display is good enough.
-
-From these assumptions I propose a new measurement, the apparent pixel (ap).  The apparent pixel is defined as:
-
-The apparent size of a 1 millimeter by 1 millimeter square, at a distance of 1 meter in front of your eye.
-
-EYE ) - - - 1m - - - [] 1mm X 1mm SQUARE.
+EYE ) - - - - 1m - - - - [ ] 1mm X 1mm SQUARE.
 
 Or, if you don't like to square pixels, imagine what a grid of points spaced 1mm apart looks like from 1 meter away.
 
@@ -93,3 +100,14 @@ You can easily calculate your own screen size
 (Width in AP) = 1000 * (Width in mm) / (Distance in mm)
 
 
+#### Why a square?
+
+A few reasons:
+
+1) A reference shape easier to visualize than something like visual angle.
+
+2) Squares correspond pretty well to how displays work today.
+
+3) It holds as valid unit of measurement for non-point cameras as well (orthographic projections).
+
+4) It has historical precedent!  Painters and artists have long used their outstretched thumbs as a reference when trying to reproduce a scene.
