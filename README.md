@@ -53,7 +53,7 @@ Or, if you don't like to square pixels, imagine what a grid of points spaced 1mm
 
 #### Estimating Distances
 
-The biggest issue in accurately calculating AP is that we don't know the distance from display to observer.  However, for the most part, we can estimate it very roughly.
+The biggest issue in accurately calculating AP is that we don't know the distance from display to observer.  However, for the most part, we can estimate it very roughly:
 	* Most people sit roughly 1m away from their laptop or desktop.
 	* Most people hold their smartphone in their hand, roughly 30cm away.
 	* Most people sit roughly 2-3m away from their TV when they watch it.
