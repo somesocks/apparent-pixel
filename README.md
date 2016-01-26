@@ -8,8 +8,8 @@ How do I make a truly display-independent design?  This is a problem that is rep
 
 	* Pixel - A point sample of an image or the smallest rendering element of a display.  There is no inherent size or shape associated with a pixel.
 	* Inch / centimeter / millimeter - Physical dimensions of size.
-	* CSS Pixel - A reference pixel attempting to be scale-independent. There are approximately 96 pixels/inch.
-	* Point - A reference dimension attempting to be scale-independent.  There are approximately 72 points/inch.
+	* CSS Pixel - A reference pixel. There are approximately 96 pixels/inch.
+	* Point - A reference dimension.  There are approximately 72 points/inch.
 	* Pica - A reference dimension equal to 12 Points.
 	* VH - A reference dimension, equal to 1/100th of the viewport height.
 	* VW - A reference dimension, equal to 1/100th of the viewport width.
@@ -21,13 +21,11 @@ Why do existing units of measurement fail?  They are incapable of accurately rep
 Why are they incapable of this? The human eye uses a curved lens, which means that to the eye, apparent size is a measure of _angle_ and not _length_.  Length, by itself, is meaningless!
 
 Unfortunately, this is not easily solved, as it involves figuring out the apparent size of a display with respect to the observer, but there are some simplifications we can make to get a decent approximation:
-
 	1)  We can assume that the observer is looking at a display from head-on.
 	2)  We can assume that the display is roughly flat.
-	3)  We can assume that the display is not so large, or so close, that it takes a significant poriton of your field-of-view.
+	3)  We can assume that the display is very large, or very near.
 
 All of these equate to making a _small-angles approximation_.  That is, we can say that all parts of the display are roughly equidistant from the observer.  If this is true, then we can approximate apparent size using only two variables:
-
 	1) The size of the display.
 	2) The distance from the display to the observer.
 
@@ -56,13 +54,11 @@ Or, if you don't like to square pixels, imagine what a grid of points spaced 1mm
 #### Estimating Distances
 
 The biggest issue in accurately calculating AP is that we don't know the distance from display to observer.  However, for the most part, we can estimate it very roughly.
-
 	* Most people sit roughly 1m away from their laptop or desktop.
 	* Most people hold their smartphone in their hand, roughly 30cm away.
 	* Most people sit roughly 2-3m away from their TV when they watch it.
 
 What about more complicated setups, such as movie projectors, electronic billboards, and stadium displays?  These need to be visible at a wide range of distances, and there are generally two things to consider here:
-
 	1) The average viewing distance, or what most people will see.
 	2) The farthest viewing distance.
 
@@ -83,7 +79,6 @@ You can easily calculate your own screen size
 #### Why a square?
 
 A few reasons:
-
 	1) A reference shape easier to visualize than something like visual angle.
 	2) Squares correspond pretty well to how displays work today.
 	3) It holds as valid unit of measurement for non-point cameras as well (orthographic projections).
