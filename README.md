@@ -2,7 +2,7 @@
 
 #### Abstract
 
-How do I make a display-independent design?  Existing units for scale-invariance don't seem to provide a satisfactory solution.  I propose a new visual measue of size, the apparent pixel, and provide some simple formulae and examples of use.
+How do I make a truly display-independent design?  This is a problem that is repeatedly encountered today, and there doesn't seem to be a satisfactory solution yet.  I propose a new unit of measure, the apparent pixel, to address shortcomings in current layout and rendering systems.
 
 #### Existing Display Measurements
 
